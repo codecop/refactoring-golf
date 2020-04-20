@@ -1,7 +1,7 @@
 import * as should from 'should';
 import { TakeHomeCalculator, Pair, Incalculable } from '../../src/hole1/hole1';
 
-describe('Hole 1: Take Home Calculator should', () => {
+describe('Hole 2: Take Home Calculator should', () => {
   it('calculate tax', async () => {
     const first = new TakeHomeCalculator(10).netAmount(new Pair<number, string>(40, "GBP"), new Pair<number, string>(50, "GBP"), new Pair<number, string>(60, "GBP")).first;
     should(first).equal(135);
