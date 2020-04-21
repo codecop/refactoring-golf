@@ -43,7 +43,7 @@ export class TakeHomeCalculator {
         if (total.second !== tax.second) {
             throw new Incalculable();
         }
-        
-        return new Pair(total.first - tax.first, first.second)
+
+        return new Pair(total.first - tax.first, first.second);
     }
 }

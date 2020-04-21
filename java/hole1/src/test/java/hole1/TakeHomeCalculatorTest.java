@@ -17,4 +17,3 @@ public class TakeHomeCalculatorTest {
         new TakeHomeCalculator(10).netAmount(new TakeHomeCalculator.Pair<>(4, "GBP"), new TakeHomeCalculator.Pair<>(5, "USD"));
     }
 }
-
