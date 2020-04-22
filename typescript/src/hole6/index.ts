@@ -1,8 +1,8 @@
 export class Incalculable extends Error {}
 
 export default class TakeHomeCalculator {
-  constructor(private readonly percent: number) {
-    this.percent = percent;
+  constructor(private readonly taxRate: TaxRate) {
+    this.taxRate = taxRate;
   }
 
   netAmount(first: Money, ...rest: Money[]): Money {
@@ -14,11 +14,28 @@ export default class TakeHomeCalculator {
       total = total.plus(next);
     });
 
-    const amount: number = total.value * (this.percent / 100);
-
-    const tax: Money = new Money(amount, first.currency);
+    const tax: Money = this.taxRate.apply(total);
 
     return total.minus(tax);
+  }
+}
+
+export class TaxRate {
+  private constructor(private readonly percent: number) {
+    this.percent = percent;
+  }
+
+  static taxRate(percent: number): TaxRate {
+    return new TaxRate(percent);
+  }
+
+  getPercent(): number {
+    return this.percent;
+  }
+
+  apply(total: Money) {
+    const amount: number = total.value * (this.getPercent() / 100);
+    return Money.money(amount, total.currency);
   }
 }
 
@@ -31,7 +48,7 @@ export class Money {
     this.currency = currency;
   }
 
-  private static money(value: number, currency: string) {
+  static money(value: number, currency: string) {
     return new Money(value, currency);
   }
 

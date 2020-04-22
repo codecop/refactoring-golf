@@ -12,6 +12,7 @@
 hs_err_pid*
 
 workspace.xml
+*.iml
 
 node_modules/
 build/
