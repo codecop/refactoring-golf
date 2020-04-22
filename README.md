@@ -1,10 +1,12 @@
 # Refactoring Golf
+Refactoring Golf is a game designed to stretch your refactoring muscles and get you to explore your IDE to see what's 
+really possible using shortcuts and automation.
 
-Refactoring Golf is a game designed to stretch your refactoring muscles and get you to explore your IDE to see what's really possible using shortcuts and automation.
+This repo contains several source trees, or numbered "Holes" based on a single exercise. Each hole carries on from the 
+last for a single exercise - which is the application of a tax amount to a set of monetary amount.
 
-This repo contains several source trees, or numbered "Holes" based on a single exercise. Each hole carries on from the last for a single exercise - which is the application of a tax amount to a set of monatary amount.
-
-Your goal is to safely and efficiently as possible refactor the Hole-X code to look like the Hole X+1 code. You must aim to do it in as few "strokes" as possible.
+Your goal is to safely and efficiently as possible refactor the Hole-X code to look like the Hole X+1 code. You must aim 
+to do it in as few "strokes" as possible.
 
 A "stroke" is essentially a change made to the code, and every stroke costs you points.
 
@@ -18,7 +20,6 @@ Your pairing partner should carefully score you as follows:
 Allow yourselves a maximum of 2 attempts at each round to determine your best score.
 
 ## Hints: 
-
 1. You may find that customising your IDE is useful (e.g. custom code templates, or even custom refactorings.)
 
 2. If possible, it would be a good idea to have the two versions (Hole X and Hole X+1) of each set of source files open on different machines, as you could easily tie yourself in knots editing the wrong files!
@@ -42,12 +43,9 @@ These are the best known scores, achieved using IntelliJ:
   - TypeScript = TBC
 
 ## Acknowledgements:
-This repo was originally forked from https://github.com/daviddenton/refactoring-golf.
-
-Credit goes to David Denton who created the version we forked.
+Credit goes to David Denton who created the version we forked. See https://github.com/daviddenton/refactoring-golf.
 
 ### Original acknowledgments
-
 This exercise was developed with Ivan (@s4nchez). :)
 Thanks to @ivanmoore and @rchatley for the inspiration.
 These instructions were mostly stolen from @jasongorman's <a href="https://github.com/jasongorman/RefactoringGolfJava">Refactoring Golf repo</a>

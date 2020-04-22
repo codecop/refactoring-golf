@@ -10,14 +10,9 @@
   "license": "Apache-2.0",
   "keywords": [],
   "scripts": {
-    "test": "mocha test/**/*.ts",
-    "check": "gts check",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run check"
+    "test": "node_modules/grunt/bin/grunt",
+    "watch": "node_modules/grunt/bin/grunt watch",
+    "compile": "node_modules/grunt/bin/grunt build"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.2",
