@@ -13,7 +13,7 @@ export class Incalculable extends Error {
 
 }
 
-export class TakeHomeCalculator {
+export default class TakeHomeCalculator {
     private percent: number;
 
     constructor(percent: number) {
@@ -40,10 +40,10 @@ export class TakeHomeCalculator {
 
         const tax: Pair<number, string> = new Pair(amount, first.second);
 
-        if (total.second !== tax.second) {
+        if (total.second === tax.second) {
+            return new Pair(total.first - tax.first, first.second);
+        } else {
             throw new Incalculable();
         }
-
-        return new Pair(total.first - tax.first, first.second);
     }
 }

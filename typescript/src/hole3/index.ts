@@ -12,7 +12,7 @@ export class Incalculable extends Error {
 
 }
 
-export class TakeHomeCalculator {
+export default class TakeHomeCalculator {
     private percent: number;
 
     constructor(percent: number) {

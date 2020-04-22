@@ -1,5 +1,5 @@
 import * as should from 'should';
-import { TakeHomeCalculator, Pair, Incalculable } from '../../src/hole1/hole1';
+import TakeHomeCalculator, { Pair, Incalculable } from '../../src/hole1';
 
 describe('Hole 1: Take Home Calculator should', () => {
   it('calculate tax', async () => {
