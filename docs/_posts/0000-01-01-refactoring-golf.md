@@ -12,6 +12,8 @@ What is this workshop about?
 + Practicing your craft 👍
 + ~~Winning~~ Having fun 👍
 
+Note: Not everyone enjoys competition.
+
 --
 
 ## Introduction
@@ -21,6 +23,8 @@ What isn’t this workshop about?
 + Convincing you that TDD is a good thing 👎
 + Learning to code 👎
 + Learning what good code is 👎
+
+Note: These are all good things, but we have limited time.
 
 ---
 
