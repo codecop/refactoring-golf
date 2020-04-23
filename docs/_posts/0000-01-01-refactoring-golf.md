@@ -34,6 +34,18 @@ Note: These are all good things, but we have limited time.
 
 —[Wikipedia](https://en.wikipedia.org/wiki/Code_refactoring)
 
+--
+
+## If you don’t know how to refactor…
+
+[Source Making][https://sourcemaking.com/refactoring) has a great site about refactoring.
+
+<https://sourcemaking.com/refactoring>
+
+Feel free to ask others for help—the aim is to learn.
+
+Note: Send the link to people via chat: https://sourcemaking.com/refactoring
+
 ---
 
 ## What is Refactoring Golf?
