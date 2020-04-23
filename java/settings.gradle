@@ -1,0 +1,9 @@
+rootProject.name = 'refactoring-golf'
+
+include 'hole1'
+include 'hole2'
+include 'hole3'
+include 'hole4'
+include 'hole5'
+include 'hole6'
+include 'hole7'
