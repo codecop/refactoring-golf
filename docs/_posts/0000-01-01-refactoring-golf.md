@@ -79,25 +79,29 @@ Note: This information is in the README
 
 ## Rules: continued
 
-+ Allow yourselves a **maximum of 2 attempts** at each round to determine your best score
-+ Work as a pair and swap roles each hole (or as and when you want to)
-+ One person codes, one person scores
-+ We’ll gather scores after each hole and discuss
-+ 10 minutes per hole, then five minutes to discuss
++ Work as a group and share attempts
++ Someone codes, someone else scores
+    + Note what steps are taken to get your best score
++ We’ll gather after each hole and discuss
++ About ten minutes per hole, then about five to discuss
 
+Note: Send link to this slide via chat so they have a scoring reference
 --
 
 ## Mechanics
 
-Clone <https://github.com/autotraderuk/refactoring-golf>
++ Clone <https://github.com/autotraderuk/refactoring-golf>
++ Use either VS Code or IntelliJ—it’s up to you
+    + VS Code has a nice built in pairing feature
 
-These slides are available as a link at the top of the repo.
-
-TODO: Teams / Zoom etc
-
+Note:
+    Since the intent is practicing, people may want to stick with the IDE they are familiar with.  
+    Possible to do Java with VS Code.  
 ---
 
 # Hole One
+
+How did people do? Would anyone like to share?
 
 + Record is three strokes
 
@@ -105,11 +109,15 @@ TODO: Teams / Zoom etc
 
 # Hole Two
 
+How did people do? Would anyone like to share?
+
 + Record is seven strokes
 
 --
 
 # Hole Three
+
+How did people do? Would anyone like to share?
 
 + Record is five strokes
 
@@ -117,11 +125,15 @@ TODO: Teams / Zoom etc
 
 # Hole Four
 
+How did people do? Would anyone like to share?
+
 + Record is six strokes
 
 --
 
 # Hole Five
+
+How did people do? Would anyone like to share?
 
 + Record is ten strokes
 
@@ -129,9 +141,11 @@ TODO: Teams / Zoom etc
 
 # Hole Six
 
+How did people do? Would anyone like to share?
+
 + Record is seven strokes
 
-Note: We don’t know how this is possible with 7 strokes
+Note: We don’t know how this is possible with seven strokes
 
 ---
 
