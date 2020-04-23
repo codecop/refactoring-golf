@@ -1,7 +1,7 @@
 # Your presentation title
 title: Refactoring Golf Workshop
 
-remote_theme: autotraderuk/jekyll-revealjs@v2.0.0
+remote_theme: autotraderuk/jekyll-revealjs@dfac078fd5a6fa0a0bba8cb5707891276d40ed46
 plugins:
   - jekyll-remote-theme
 
