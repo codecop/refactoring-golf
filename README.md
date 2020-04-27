@@ -26,21 +26,27 @@ Allow yourselves a maximum of 2 attempts at each round to determine your best sc
 
 3. Keep that second machine available as a tooling environment. Writing custom tools (scripts, templates etc) costs you zero points in refactoring golf.
 
-## Course records:
-These are the best known scores, achieved using IntelliJ:
+## Setup
+There are course for [Java](java/README.md), [TypeScript](typescript/README.md) and [Kotlin](kotlin/README.md). 
 
-| Hole | Java | TypeScript | Notes |
-|------|------|------------|-------|
-| 1    | 3    |            |       |
-| 2    | 7    |            |       |
-| 3    | 5    |            |       |
-| 4    | 6    |            |       |
-| 5    | 10   |            |       |
-| 6    | 7    |            |       |
+Choose the course you want to play and follow the instructions.
+
+## Course records:
+These are the best known scores:
+
+| Hole | Java | TypeScript | Kotlin | Notes |
+|------|------|------------|--------|-------|
+| 1    | 3    |            |        |       |
+| 2    | 7    |            |        |       |
+| 3    | 5    |            |        |       |
+| 4    | 6    |            |        |       |
+| 5    | 10   |            |        |       |
+| 6    | 7    |            |        |       |
  
 **Course Record:**
   - Java = 38
   - TypeScript = TBC
+  - Kotlin = TBC
 
 ## Acknowledgements:
 Credit goes to David Denton who created the version we forked. See https://github.com/daviddenton/refactoring-golf.

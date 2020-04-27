@@ -31,3 +31,5 @@ docs/Gemfile.lock
 # Cache of project
 .gradletasknamecache
 
+
+.tscache/
