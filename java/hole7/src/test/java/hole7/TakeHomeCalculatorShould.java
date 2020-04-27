@@ -1,15 +1,18 @@
 package hole7;
 
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static hole7.Money.money;
 import static hole7.TaxRate.taxRate;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+@DisplayName("Hole 7: Take home calculator should")
 public class TakeHomeCalculatorShould {
 
     @Test
-    public void calculate_tax() throws Exception {
+    public void calculate_tax() {
         Integer first = new TakeHomeCalculator(taxRate(10)).netAmount(
                 money(40, "GBP"),
                 money(50, "GBP"),
@@ -18,11 +21,12 @@ public class TakeHomeCalculatorShould {
         assertEquals(135, first.intValue());
     }
 
-    @Test(expected = Incalculable.class)
-    public void not_sum_different_currencies() throws Exception {
-        new TakeHomeCalculator(taxRate(10)).netAmount(
-                money(4, "GBP"),
-                money(5, "USD")
+    @Test
+    public void not_sum_different_currencies() {
+        assertThrows(Incalculable.class, () ->
+                new TakeHomeCalculator(taxRate(10)).netAmount(
+                        money(4, "GBP"),
+                        money(5, "USD"))
         );
     }
 }

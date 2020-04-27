@@ -1,9 +1,13 @@
 package hole1;
 
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+@DisplayName("Hole 1: Take home calculator should")
 public class TakeHomeCalculatorShould {
 
     @Test
@@ -16,11 +20,13 @@ public class TakeHomeCalculatorShould {
         assertEquals(135, first.intValue());
     }
 
-    @Test(expected = Incalculable.class)
+    @Test
     public void not_sum_different_currencies() throws Exception {
-        new TakeHomeCalculator(10).netAmount(
-                new TakeHomeCalculator.Pair<>(4, "GBP"),
-                new TakeHomeCalculator.Pair<>(5, "USD")
+        assertThrows(Incalculable.class, () ->
+                new TakeHomeCalculator(10).netAmount(
+                        new TakeHomeCalculator.Pair<>(4, "GBP"),
+                        new TakeHomeCalculator.Pair<>(5, "USD")
+                )
         );
     }
 }
