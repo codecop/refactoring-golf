@@ -1,4 +1,6 @@
 # Refactoring Golf
+![CI](https://github.com/autotraderuk/refactoring-golf/workflows/CI/badge.svg?branch=master)
+
 Refactoring Golf is a game designed to stretch your refactoring muscles and get you to explore your IDE to see what's 
 really possible using shortcuts and automation.
 
