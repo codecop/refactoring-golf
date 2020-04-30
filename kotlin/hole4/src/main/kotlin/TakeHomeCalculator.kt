@@ -8,7 +8,7 @@ internal class TakeHomeCalculator(private val percent: Int) {
 
         var total = first
 
-        monies.forEach { total = total.plus(it) }
+        monies.forEach { total += it }
 
         val amount = total.value * (percent / 100.0)
 
@@ -22,7 +22,7 @@ internal class TakeHomeCalculator(private val percent: Int) {
     }
 
     internal data class Money(val value: Int, val currency: String) {
-        fun plus(other: Money): Money {
+        operator fun plus(other: Money): Money {
             if (other.currency != currency) {
                 throw Incalculable()
             }
