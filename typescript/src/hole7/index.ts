@@ -4,13 +4,13 @@ export default class TakeHomeCalculator {
   }
 
   netAmount(first: Money, ...rest: Money[]): Money {
-    const total = rest.reduce(money => money.plus(first));
+    const total = rest.reduce((acc, money) => acc.plus(money), first);
     const tax = this.taxRate.apply(total);
     return total.minus(tax);
   }
 }
 
-export class Incalculable extends Error {}
+export class Incalculable extends Error { }
 
 export class Money {
   value: number;
@@ -39,9 +39,14 @@ export class Money {
     return Money.money(this.value - other.value, this.currency);
   }
 }
+
 export class TaxRate {
   private constructor(private readonly percent: number) {
     this.percent = percent;
+  }
+
+  static taxRate(percent: number): TaxRate {
+    return new TaxRate(percent);
   }
 
   apply(total: Money) {
