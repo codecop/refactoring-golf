@@ -9,7 +9,7 @@ internal class TakeHomeCalculator(private val percent: Int) {
         var total = first
 
         pairs.forEach {
-            if (it.second != total.second) {
+            if (!it.second.equals(total.second)) {
                 throw Incalculable()
             }
         }
@@ -22,7 +22,7 @@ internal class TakeHomeCalculator(private val percent: Int) {
 
         val tax = Pair(amount.toInt(), first.second)
 
-        return if (total.second === tax.second) {
+        return if (total.second.equals(tax.second)) {
             Pair(total.first - tax.first, first.second)
         } else {
             throw Incalculable()
