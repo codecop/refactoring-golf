@@ -3,10 +3,7 @@ export default class TakeHomeCalculator {
     this.percent = percent;
   }
 
-  netAmount(
-    first: Pair<number, string>,
-    ...rest: Pair<number, string>[]
-  ): Pair<number, string> {
+  netAmount(first: Pair<number, string>, ...rest: Pair<number, string>[]): Pair<number, string> {
     const pairs = rest;
 
     let total = first;
