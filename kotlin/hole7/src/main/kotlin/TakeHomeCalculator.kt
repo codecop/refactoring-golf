@@ -1,4 +1,4 @@
-package hole6
+package hole7
 
 import java.util.Arrays.stream
 
@@ -6,7 +6,7 @@ class Incalculable : Throwable()
 
 internal class TakeHomeCalculator(private val taxRate: TaxRate) {
     fun netAmount(first: Money, vararg rest: Money): Money {
-        val total = stream(rest).reduce(first, Money::plus)
+        val total = rest.fold(first) { acc, money -> acc + money }
         val tax = taxRate.apply(total)
         return total - tax
     }

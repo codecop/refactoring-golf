@@ -1,4 +1,4 @@
-package hole6
+package hole7
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.DisplayName
