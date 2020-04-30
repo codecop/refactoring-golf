@@ -29,9 +29,9 @@ Allow yourselves a maximum of 2 attempts at each round to determine your best sc
 3. Keep that second machine available as a tooling environment. Writing custom tools (scripts, templates etc) costs you zero points in refactoring golf.
 
 ## Setup
-There are course for [Java](java/README.md), [TypeScript](typescript/README.md) and [Kotlin](kotlin/README.md). 
-
 Choose the course you want to play and follow the instructions.
+
+You options are [Java](java/README.md), [TypeScript](typescript/README.md) and [Kotlin](kotlin/README.md). 
 
 ## Course records:
 These are the best known scores:
