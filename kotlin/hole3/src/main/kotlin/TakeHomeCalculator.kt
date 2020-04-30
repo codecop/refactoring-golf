@@ -8,13 +8,13 @@ internal class TakeHomeCalculator(private val percent: Int) {
 
         var total = first
 
-        for (next in monies) {
-            if (next.currency != total.currency) {
+        monies.forEach {
+            if (it.currency != total.currency) {
                 throw Incalculable()
             }
         }
 
-        for (next in monies) {
+        monies.forEach { next ->
             total = Money(total.value + next.value, next.currency)
         }
 
@@ -29,6 +29,6 @@ internal class TakeHomeCalculator(private val percent: Int) {
         return Money(total.value - tax.value, first.currency)
     }
 
-    internal class Money(val value: Int, val currency: String)
+    internal data class Money(val value: Int, val currency: String)
 
 }

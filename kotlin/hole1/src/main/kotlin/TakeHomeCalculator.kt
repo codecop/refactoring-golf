@@ -8,14 +8,14 @@ internal class TakeHomeCalculator(private val percent: Int) {
 
         var total = first
 
-        for (next in pairs) {
-            if (next.second != total.second) {
+        pairs.forEach {
+            if (it.second != total.second) {
                 throw Incalculable()
             }
         }
 
-        for (next in pairs) {
-            total = Pair(total.first + next.first, next.second)
+        pairs.forEach {
+            total = Pair(total.first + it.first, it.second)
         }
 
         val amount = total.first * (percent / 100.0)
@@ -29,7 +29,6 @@ internal class TakeHomeCalculator(private val percent: Int) {
         }
     }
 
-    internal class Pair<A, B>(val first: A, val second: B)
-
+    internal data class Pair<A, B>(val first: A, val second: B)
 }
 

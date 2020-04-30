@@ -1,6 +1,5 @@
 package hole5
 
-import hole5.Money.Companion.money
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -11,9 +10,9 @@ class TakeHomeCalculatorShould {
     @Test
     fun `calculate tax`() {
         val first = TakeHomeCalculator(10).netAmount(
-                money(40, "GBP"),
-                money(50, "GBP"),
-                money(60, "GBP")
+                Money(40, "GBP"),
+                Money(50, "GBP"),
+                Money(60, "GBP")
         ).value
         assertEquals(135, first)
     }
@@ -22,8 +21,8 @@ class TakeHomeCalculatorShould {
     fun `not sum different currencies`() {
         assertThrows<Incalculable> {
             TakeHomeCalculator(10).netAmount(
-                    money(4, "GBP"),
-                    money(5, "USD")
+                    Money(4, "GBP"),
+                    Money(5, "USD")
             )
         }
     }
