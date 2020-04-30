@@ -67,5 +67,5 @@ module.exports = function (grunt) {
   grunt.registerTask('lint', ['eslint']);
   grunt.registerTask('test', ['mochaTest']);
   grunt.registerTask('build', ['exec:clean', 'ts']);
-  grunt.registerTask('default', ['lint', 'test']);
+  grunt.registerTask('default', ['test']);
 };
