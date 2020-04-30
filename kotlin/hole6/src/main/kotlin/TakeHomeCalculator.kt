@@ -25,7 +25,7 @@ internal data class Money(val value: Int, val currency: String) {
     }
 
     operator fun minus(other: Money): Money {
-        if (currency != other.currency) {
+        if (other.currency != currency) {
             throw Incalculable()
         }
         return Money(value - other.value, currency)
