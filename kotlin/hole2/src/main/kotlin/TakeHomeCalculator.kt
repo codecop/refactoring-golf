@@ -4,7 +4,7 @@ class Incalculable : Throwable()
 
 internal class TakeHomeCalculator(private val percent: Int) {
     fun netAmount(first: Pair<Int, String>, vararg rest: Pair<Int, String>): Pair<Int, String> {
-        val pairs: List<Pair<Int, String>> = listOf(*rest)
+        val pairs: List<Pair<Int, String>> = rest.toList()
 
         var total = first
 
