@@ -24,3 +24,9 @@ jobs:
       run: cd java && chmod +x gradlew && ./gradlew build
     - name: Build Kotlin
       run: cd kotlin && chmod +x gradlew && ./gradlew build
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - run: npm install
+    - run: npm test
