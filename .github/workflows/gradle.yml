@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Change to the java directory
-      run: cd java
+      run: cd java && ls -ltr
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
