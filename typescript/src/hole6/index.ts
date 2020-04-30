@@ -1,49 +1,30 @@
-export class Incalculable extends Error {}
-
 export default class TakeHomeCalculator {
   constructor(private readonly taxRate: TaxRate) {
     this.taxRate = taxRate;
   }
 
   netAmount(first: Money, ...rest: Money[]): Money {
-    const monies: Money[] = rest;
+    const monies = rest;
 
-    let total: Money = first;
+    let total = first;
 
-    monies.forEach((next: Money) => {
+    monies.forEach(next => {
       total = total.plus(next);
     });
 
-    const tax: Money = this.taxRate.apply(total);
+    const tax = this.taxRate.apply(total);
 
     return total.minus(tax);
   }
 }
 
-export class TaxRate {
-  private constructor(private readonly percent: number) {
-    this.percent = percent;
-  }
-
-  static taxRate(percent: number): TaxRate {
-    return new TaxRate(percent);
-  }
-
-  getPercent(): number {
-    return this.percent;
-  }
-
-  apply(total: Money) {
-    const amount: number = total.value * (this.getPercent() / 100);
-    return Money.money(amount, total.currency);
-  }
-}
+export class Incalculable extends Error {}
 
 export class Money {
   value: number;
   currency: string;
 
-  constructor(value: number, currency: string) {
+  private constructor(value: number, currency: string) {
     this.value = value;
     this.currency = currency;
   }
@@ -64,5 +45,20 @@ export class Money {
       throw new Incalculable();
     }
     return Money.money(this.value - other.value, this.currency);
+  }
+}
+
+export class TaxRate {
+  private constructor(private readonly percent: number) {
+    this.percent = percent;
+  }
+
+  static taxRate(percent: number): TaxRate {
+    return new TaxRate(percent);
+  }
+
+  apply(total: Money) {
+    const amount: number = total.value * (this.percent / 100);
+    return Money.money(amount, total.currency);
   }
 }

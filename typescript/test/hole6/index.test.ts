@@ -8,9 +8,9 @@ import TakeHomeCalculator, {
 describe('Hole 6: Take Home Calculator should', () => {
   it('calculate tax', async () => {
     const first = new TakeHomeCalculator(TaxRate.taxRate(10)).netAmount(
-      new Money(40, 'GBP'),
-      new Money(50, 'GBP'),
-      new Money(60, 'GBP')
+      Money.money(40, 'GBP'),
+      Money.money(50, 'GBP'),
+      Money.money(60, 'GBP')
     ).value;
 
     first.should.equal(135);
@@ -20,8 +20,8 @@ describe('Hole 6: Take Home Calculator should', () => {
     should.throws(
       () =>
         new TakeHomeCalculator(TaxRate.taxRate(10)).netAmount(
-          new Money(4, 'GBP'),
-          new Money(5, 'USD')
+          Money.money(4, 'GBP'),
+          Money.money(5, 'USD')
         ),
       Incalculable
     );

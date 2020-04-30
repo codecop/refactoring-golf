@@ -1,3 +1,31 @@
+export default class TakeHomeCalculator {
+  constructor(private readonly percent: number) {
+    this.percent = percent;
+  }
+
+  netAmount(first: Money, ...rest: Money[]): Money {
+    const monies = rest;
+
+    let total = first;
+
+    monies.forEach(next => {
+      total = total.plus(next);
+    });
+
+    const amount = total.value * (this.percent / 100);
+
+    const tax = new Money(amount, first.currency);
+
+    if (total.currency !== tax.currency) {
+      throw new Incalculable();
+    }
+
+    return new Money(total.value - tax.value, first.currency);
+  }
+}
+
+export class Incalculable extends Error {}
+
 export class Money {
   value: number;
   currency: string;
@@ -12,35 +40,5 @@ export class Money {
       throw new Incalculable();
     }
     return new Money(this.value + other.value, other.currency);
-  }
-}
-
-export class Incalculable extends Error {}
-
-export default class TakeHomeCalculator {
-  private percent: number;
-
-  constructor(percent: number) {
-    this.percent = percent;
-  }
-
-  netAmount(first: Money, ...rest: Money[]): Money {
-    const monies: Money[] = rest;
-
-    let total: Money = first;
-
-    monies.forEach((next: Money) => {
-      total = total.plus(next);
-    });
-
-    const amount: number = total.value * (this.percent / 100);
-
-    const tax: Money = new Money(amount, first.currency);
-
-    if (total.currency !== tax.currency) {
-      throw new Incalculable();
-    }
-
-    return new Money(total.value - tax.value, first.currency);
   }
 }

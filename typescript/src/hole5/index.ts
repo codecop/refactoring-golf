@@ -1,37 +1,37 @@
-export class Incalculable extends Error {}
-
 export default class TakeHomeCalculator {
   constructor(private readonly percent: number) {
     this.percent = percent;
   }
 
   netAmount(first: Money, ...rest: Money[]): Money {
-    const monies: Money[] = rest;
+    const monies = rest;
 
-    let total: Money = first;
+    let total = first;
 
-    monies.forEach((next: Money) => {
+    monies.forEach(next => {
       total = total.plus(next);
     });
 
-    const amount: number = total.value * (this.percent / 100);
+    const amount = total.value * (this.percent / 100);
 
-    const tax: Money = new Money(amount, first.currency);
+    const tax = Money.money(amount, first.currency);
 
     return total.minus(tax);
   }
 }
 
+export class Incalculable extends Error {}
+
 export class Money {
   value: number;
   currency: string;
 
-  constructor(value: number, currency: string) {
+  private constructor(value: number, currency: string) {
     this.value = value;
     this.currency = currency;
   }
 
-  private static money(value: number, currency: string) {
+  static money(value: number, currency: string) {
     return new Money(value, currency);
   }
 
