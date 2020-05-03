@@ -14,8 +14,8 @@ internal class TakeHomeCalculator(private val percent: Int) {
             }
         }
 
-        monies.forEach { next ->
-            total = Money(total.value + next.value, next.currency)
+        monies.forEach {
+            total = Money(total.value + it.value, it.currency)
         }
 
         val amount = total.value * (percent / 100.0)
