@@ -36,7 +36,7 @@ These are the best known scores, achieved using IntelliJ:
 | 3    | 5          | 6     | manual join loop, extract, inline local, move, rename
 | 4    | 6          | 9     | factory method, manual total, extract, move, move, make public*, rename, static import
 | 5    | 10         | 9     | manual total, extract m, Parameter Object, Alt-Enter field, inline, move, change method sig, factory method
-| 6    | 7          |       |
+| 6    | 7          | 9     | inline, manual iterable statt List, manual reduce/loop to optional, manual use first, static import, organise
 
 Course Record: **38**
 

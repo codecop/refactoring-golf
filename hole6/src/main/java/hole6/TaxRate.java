@@ -13,12 +13,8 @@ public class TaxRate {
         return new TaxRate(percent);
     }
 
-    public int getPercent() {
-        return percent;
-    }
-
     Money apply(Money total) {
-        Double amount = total.value * (getPercent() / 100d);
+        Double amount = total.value * (percent / 100d);
         return money(amount.intValue(), total.currency);
     }
 }
