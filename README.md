@@ -31,8 +31,8 @@ These are the best known scores, achieved using IntelliJ:
 
 | Hole | Best score | Notes |
 |------|------------|-------|
-| 1    | 3          | 4     |
-| 2    | 7          |       |
+| 1    | 3          | 4     | Alt-Enter ==, Alt-Enter !=, Alt-Enter Invert Condition, Alt-Enter remove redundant
+| 2    | 7          | 7     | 3xRename, manual Integer, String, 2x safe delete
 | 3    | 5          |       |
 | 4    | 6          |       |
 | 5    | 10         |       |
