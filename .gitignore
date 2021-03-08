@@ -1,17 +1,20 @@
-*.class
+# Eclipse
+.project
+.settings
+.classpath
+.checkstyle
+.pmd
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# IDEA
+.idea
+*.iml
+*.iwr
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# Maven
+target
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
-.idea/workspace.xml
 
 # Jekyll generated files
 docs/_site
