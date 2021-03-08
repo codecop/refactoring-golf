@@ -34,7 +34,7 @@ These are the best known scores, achieved using IntelliJ:
 | 1    | 3          | 4     | Alt-Enter ==, Alt-Enter !=, Alt-Enter Invert Condition, Alt-Enter remove redundant
 | 2    | 7          | 7     | 3xRename, manual Integer, String, 2x safe delete
 | 3    | 5          | 5     | manual join loop, extract, inline local, move, rename
-| 4    | 6          |       |
+| 4    | 6          | 8     | factory method, manual total, extract, move, move, make public*, rename, static import
 | 5    | 10         |       |
 | 6    | 7          |       |
 
